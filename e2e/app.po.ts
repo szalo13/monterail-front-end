@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class MonterailFrontEndPage {
+export class MonterailFePage {
   navigateTo() {
     return browser.get('/');
   }

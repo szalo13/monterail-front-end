@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.28.3",
-    "name": "monterail-front-end"
+    "name": "monterail-fe"
   },
   "apps": [
     {

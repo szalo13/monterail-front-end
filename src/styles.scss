@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'theme/_variables.scss';
+/* BootStrap */
+@import 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+/* FontAwesome */
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
+/* Compass */
+@import 'node_modules/compass-sass-mixins/lib/_compass.sass';
+
+body {
+  background-color: $background-color;
+  color: $black;
+  font-size: 14px;
+}

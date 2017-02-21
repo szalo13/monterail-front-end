@@ -1,10 +1,10 @@
-import { MonterailFrontEndPage } from './app.po';
+import { MonterailFePage } from './app.po';
 
-describe('monterail-front-end App', function() {
-  let page: MonterailFrontEndPage;
+describe('monterail-fe App', function() {
+  let page: MonterailFePage;
 
   beforeEach(() => {
-    page = new MonterailFrontEndPage();
+    page = new MonterailFePage();
   });
 
   it('should display message saying app works', () => {
