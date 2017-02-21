@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'theme/_variables.scss';
+@import 'theme/_base.scss';
+@import 'app/app.component.scss';
 /* BootStrap */
-@import 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
 /* FontAwesome */
-@import 'node_modules/font-awesome/scss/font-awesome.scss';
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
 /* Compass */
 @import 'node_modules/compass-sass-mixins/lib/_compass.sass';
-
-body {
-  background-color: $background-color;
-  color: $black;
-  font-size: 14px;
-}
+/* Pages */
+@import 'app/pages/all-questions/all-questions.component.scss';
+@import 'app/pages/single-question/single-question.component.scss';
+/* Components */
+@import 'app/pages/profile/profile.component.scss';
