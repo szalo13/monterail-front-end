@@ -1,0 +1,22 @@
+@import '../../../theme/_variables.scss';
+app-votes-inline {
+  font-style: italic;
+  h3,
+  span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  a {
+    display: block;
+  }
+
+  span {
+    cursor: pointer;
+    padding-top: 0.35em;
+    padding-left: 1em;
+
+    i {
+      color: $dark-blue;
+    }
+  }
+}
