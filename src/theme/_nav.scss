@@ -1,0 +1,121 @@
+@import '_variables.scss';
+
+.app-nav {
+  $nav-top-padd: $size-mid-primary;
+  
+  .search-row {
+    display: none;
+  }
+
+  .arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em;
+    margin: 0 $size-third;
+
+    .fa-angle-left,
+    .fa-circle-thin {
+      color: $dark-grey;
+    }
+  }
+
+  .first-row {
+    position: relative;
+    padding: $size-small;
+
+    a,
+    h1,
+    ul {
+      vertical-align: sub;
+      padding: 0;
+      margin: 0;
+    }
+
+    a,
+    h1 {
+      display: inline-block;
+    }
+
+    h1 {
+      width: 100%;
+      padding-left: 2*$size-third + $size-primary;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .add-quest {
+      float: right;
+      font-size: 0.5em;
+    }
+
+    .one-row {
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {
+    .arrow {
+      top: $nav-top-padd;
+      margin: 0 $size-third;
+    }
+
+    .first-row {
+      padding: $nav-top-padd 0 $nav-top-padd $boot-row;
+
+      h1 {
+        padding-left: 0;
+        width: 49%;
+      }
+
+      .add-quest {
+        float: none;
+      }
+
+      ul {
+        display: inline-block;
+        text-align: right;
+        width: 49%;
+
+        .checkboxes {
+          padding-right: $boot-row;
+        }
+        li {
+          font-size: 0.9em;
+          width: 49%;
+          display: inline-block;
+        }
+
+        .sort-by a {
+          vertical-align: baseline;
+        }
+      }
+    }
+
+    .search-row {
+      .btn-nav,
+      input {
+        width: 100%;
+        padding: 10px 20px;
+      }
+
+      input {
+        border: 1px solid #eee;
+        background-color: #fbfbfb;
+        color: #A7A9AC;
+      }
+
+      .btn-nav {
+        width: 100%;
+        text-transform: uppercase;
+        background-color: white;
+        border-radius: 0;
+        border: 1px solid #A7A9AC;
+      }
+    }
+  }
+  @media screen and (min-width: 996px) {}
+}

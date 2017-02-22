@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { AllQuestionsComponent } from './pages/all-questions/all-questions.component';
 import { SingleQuestionComponent } from './pages/single-question/single-question.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { VotesInlineComponent } from './components/votes-inline/votes-inline.component';
+import { TittleRowComponent } from './components/tittle-row/tittle-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllQuestionsComponent,
     SingleQuestionComponent,
-    ProfileComponent
+    ProfileComponent,
+    VotesInlineComponent,
+    TittleRowComponent
   ],
   imports: [
     BrowserModule,
