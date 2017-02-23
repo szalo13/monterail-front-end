@@ -2,7 +2,7 @@
 
 .app-nav {
   $nav-top-padd: $size-mid-primary;
-  
+
   .search-row {
     display: none;
   }
@@ -96,6 +96,7 @@
     }
 
     .search-row {
+      display: block;
       .btn-nav,
       input {
         width: 100%;

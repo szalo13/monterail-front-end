@@ -9,11 +9,9 @@ $light-blue: #e0f3fc;
 $light-grey: #eeeeee;
 $border-light: #eee;
 $footer-red: #E02F4C;
-$orange-primary: #FC7E72;
-//Fonts
+$orange-primary: #FC7E72; //Fonts
 $font-secondary: 'Merriweather', serif;
-$p-line-height: 1.8em;
-//Sizes
+$p-line-height: 1.8em; //Sizes
 $size-small: 5px;
 $size-primary: 25px;
 $size-secondary: 15px;
@@ -21,7 +19,11 @@ $size-third: 10px;
 $size-mid-primary: 60px;
 $size-mid-secondary: 40px;
 $boot-row: 15px;
-//Grid
+$avatar-box: 100px; //Grid
+
 body {
   font-family: $font-secondary;
 }
+@media screen and (min-width: 480px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 996px) {}

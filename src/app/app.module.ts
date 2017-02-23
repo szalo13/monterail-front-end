@@ -9,6 +9,7 @@ import { SingleQuestionComponent } from './pages/single-question/single-question
 import { ProfileComponent } from './pages/profile/profile.component';
 import { VotesInlineComponent } from './components/votes-inline/votes-inline.component';
 import { TittleRowComponent } from './components/tittle-row/tittle-row.component';
+import { QuestionComponent } from './components/question/question.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TittleRowComponent } from './components/tittle-row/tittle-row.component
     SingleQuestionComponent,
     ProfileComponent,
     VotesInlineComponent,
-    TittleRowComponent
+    TittleRowComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

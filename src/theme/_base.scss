@@ -3,12 +3,57 @@ body {
   color: $black;
   font-size: 14px;
 
-  ul,
-  ol {
+  ol,
+  ul {
     list-style-type: none;
   }
 }
 
+.pos-rel {
+  position: relative;
+}
+
+.light-blue {
+  background-color: $light-blue;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class*=" col-"],
+.row.no-gutters > [class^="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.min768 {
+  display: none !important;
+}
+
+.max768 {
+  display: block !important;
+}
+@media only screen and (min-width : 768px) {
+  .is-table-row {
+    display: table;
+  }
+
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+}
 @media screen and (min-width: 480px) {}
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+  .min768 {
+    display: block !important;
+  }
+
+  .max768 {
+    display: none !important;
+  }
+}
 @media screen and (min-width: 996px) {}
