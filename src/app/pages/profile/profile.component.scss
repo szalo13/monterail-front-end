@@ -2,6 +2,9 @@
 @import '../../../theme/_mixins.scss';
 
 app-profile {
+  ul {
+    padding-left: 0;
+  }
   $background-color: $white;
   text-align: center;
 
@@ -24,25 +27,20 @@ app-profile {
   }
 
   .member-info {
+    padding-left: 0;
     border-bottom: 2px solid $dark-grey;
     padding-bottom: $size-secondary;
 
-    li:nth-child(1) {
-      text-align: left;
-    };
-
-    li:nth-child(2) {
-      text-align: center;
-    };
-
-    li:nth-child(3) {
-      text-align: right;
-    };
+    li {
+      font-size: 0.2em;
+    }
 
     li {
-      display: inline-block;
+      display: block;
       list-style: none;
-      width: 33%;
+      width: 100%;
+      font-size: 1.3em;
+      padding-top: $size-secondary;
 
       .certif {
         font-size: 0.75em;
@@ -58,6 +56,7 @@ app-profile {
       }
 
       strong {
+        display: block;
         text-transform: uppercase;
         color: $dark-grey;
         padding-right: $size-third;
@@ -85,7 +84,7 @@ app-profile {
 
     h1 {
       font-style: italic;
-      font-size: 4em;
+      font-size: 2em;
     }
 
     h4 {
@@ -97,7 +96,7 @@ app-profile {
 
     .info-square-box {
       width: 100%;
-      padding: 0 $size-mid-primary;
+      padding: 0 $size-primary;
       position: relative;
 
       li {
@@ -126,19 +125,23 @@ app-profile {
   }
 
   .hott-info {
-  padding: $size-mid-secondary;
-  margin: $size-mid-secondary 0;
-  text-align: center;
-  background: $gradient;
-  position: relative;
+    padding: $size-mid-secondary $size-third;
+    margin: $size-mid-secondary 0;
+    text-align: center;
+    background: $gradient;
+    position: relative;
+
     h1 {
+      font-size: 2.1em;
       color: $dark-blue;
       font-style: italic;
       margin-top: $size-third;
     }
 
     h2 {
+      font-size: 1.8em;
       color: $dark-grey;
+
       strong {
         padding: 0 0.5em;
         color: $dark-blue;
@@ -159,12 +162,66 @@ app-profile {
         display: inline-block;
         list-style-type: none;
         padding-top: $size-mid-secondary;
-        width: 24%;
+        width: 49%;
 
         strong {
           padding: 0 0.5em;
           color: $black;
         }
+      }
+    }
+  }
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {
+    .member-info {
+      display: inline-block;
+      width: 33%;
+
+      li {
+        font-size: 1em;
+
+        li:nth-child(1) {
+          text-align: left;
+        };
+
+        li:nth-child(2) {
+          text-align: center;
+        };
+
+        li:nth-child(3) {
+          text-align: right;
+        };
+      }
+      strong {
+        display: inline;
+      }
+    }
+    .how-start {
+      h1 {
+        font-size: 4em;
+      }
+    }
+    .info-square-box {
+      padding: 0 $size-mid-primary;
+    }
+    .hott-info {
+      padding: $size-mid-secondary;
+
+      h1 {
+        font-size: 3em;
+      }
+      h2 {
+        font-size: 2.5em;
+      }
+      .info-row li {
+        width: 24%;
+      }
+    }
+  }
+  @media screen and (min-width: 996px) {
+    .member-info {
+      li {
+        font-size: 1.3em;
       }
     }
   }

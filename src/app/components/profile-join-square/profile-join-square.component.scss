@@ -1,4 +1,5 @@
 @import '../../../theme/_variables.scss';
+
 .join-square {
   list-style: none;
   display: inline-block;
@@ -7,15 +8,15 @@
 
   h6 {
     color: $dark-blue;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
-    width: 120px;
+    width: 100px;
     text-align: center;
   }
 
   .photo-box {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     padding: $size-primary;
     background-color: $light-grey;
     background: $gradient;
@@ -26,4 +27,16 @@
       height: 100%;
     }
   }
+  @media screen and (min-width: 480px) {}
+    @media screen and (min-width: 768px) {
+      .photo-box {
+        width: 120px;
+        height: 120px;
+      }
+      h6 {
+        width: 120px;
+        font-size: 1.5em;
+      }
+    }
+    @media screen and (min-width: 996px) {}
 }
