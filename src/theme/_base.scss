@@ -1,3 +1,4 @@
+@import '_mixins.scss';
 body {
   background-color: $background-color;
   color: $black;
@@ -8,6 +9,10 @@ body {
     list-style-type: none;
   }
 }
+
+  .box-shadow {
+    @include box-shadow(2px, -2px, 2px, $light-grey);
+  }
 
 .pos-rel {
   position: relative;
@@ -35,6 +40,7 @@ body {
 .max768 {
   display: block !important;
 }
+
 @media only screen and (min-width : 768px) {
   .is-table-row {
     display: table;

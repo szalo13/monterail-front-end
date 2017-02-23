@@ -3,11 +3,27 @@
 app-single-question {
   $border-width: 1px;
   $border: $border-width solid $light-grey;
-  $background-color: $white;
+  $background-color: $background-color;
+  $background-color: $background-color;
+
+  .answered {
+    font-style: italic;
+    text-align: center;
+    padding-bottom: $size-third;
+
+    strong {
+      font-weight: bold;
+      padding: 0 $size-small;
+    }
+  }
+
+  .app-question-cont {
+    padding-bottom: $size-mid-primary;
+  }
 
   app-votes-inline {
     padding-right: $size-secondary;
-    padding-bottom: $size-third;
+    padding-bottom: $size-secondary;
     text-align: center;
     display: block;
     float: right;
@@ -16,6 +32,11 @@ app-single-question {
   .comments {
     background-color: $background-color;
     position: relative;
+
+    .comment,
+    .sub-comment.row {
+      background-color: $white;
+    }
 
     .content {
       padding-right: $size-secondary;
@@ -28,9 +49,12 @@ app-single-question {
     }
 
     .last app-comment-row {
-      h1,
-      p {
+      h1 {
         padding-bottom: $size-mid-secondary;
+      }
+
+      p {
+        padding-bottom: $size-third;
       }
     }
   }
@@ -72,11 +96,28 @@ app-single-question {
       float: none;
     }
 
+    .app-question-cont {
+      padding-bottom: $size-mid-secondary;
+    }
+
     .comments {
       .sub-comment {
+        margin-left: $avatar-box + 1px;
         border-left: 0;
+
+        app-votes-inline {
+          margin-right: $size-primary;
+        }
+      }
+
+      .last app-comment-row {
+        h1,
+        p {
+          padding-bottom: $size-mid-primary;
+        }
       }
     }
+
     .bordered {
       .content {
         border-left: $border;
@@ -85,19 +126,11 @@ app-single-question {
       .sub-comment {
         app-comment-row {
           border-left: $border;
-          margin-left: $avatar-box + 1px;
         }
 
         .content {
           padding-right: $avatar-box;
         }
-      }
-    }
-
-    .last app-comment-row {
-      h1,
-      p {
-        padding-bottom: $size-mid-primary;
       }
     }
   }

@@ -22,6 +22,7 @@ $boot-row: 15px;
 $avatar-box: 100px; //Grid
 
 body {
+  background-color: $background-color;
   font-family: $font-secondary;
 }
 @media screen and (min-width: 480px) {}
