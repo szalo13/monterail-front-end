@@ -2,13 +2,14 @@
 @import '../../../theme/_mixins.scss';
 
 app-profile {
-$background-color: $white;
-text-align: center;
+  $background-color: $white;
+  text-align: center;
 
-.photo-box {
-  width: 80px;
-  padding: $size-third;
-}
+  .photo-box {
+    width: 80px;
+    padding: $size-third;
+  }
+
   .close-btn {
     color: $dark-grey;
     position: absolute;
@@ -66,6 +67,7 @@ text-align: center;
 
   .how-start {
     position: relative;
+
     .arrow {
       font-size: 1.5em;
       @include link-colors($dark-grey, $dark-blue, $dark-blue, $dark-grey, $dark-blue);
@@ -85,6 +87,7 @@ text-align: center;
       font-style: italic;
       font-size: 4em;
     }
+
     h4 {
       color: $dark-grey;
       text-transform: uppercase;
@@ -103,60 +106,52 @@ text-align: center;
         list-style: none;
         padding: $size-third;
       }
+
       li:nth-child(1) .square-outer {
         @include transform(rotate(-120deg));
       }
+
       li:nth-child(2) .square-outer {
         @include transform(rotate(-15deg));
       }
+
       li:nth-child(3) .square-outer {
         @include transform(rotate(-35deg));
       }
+
       li:nth-child(4) .square-outer {
         @include transform(rotate(25deg));
       }
     }
   }
 
-  .join-square {
-    list-style: none;
-    display: inline-block;
-    padding: $size-small;
-      position: relative;
-
-  h6 {
-    color: $dark-blue;
-    font-size: 1.5em;
-
-
-  }
-    .photo-box {
-      width: 120px;
-      height: 120px;
-      padding: $size-primary;
-      background-color: $light-grey;
-
-      img {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-      }
-  }
-
-  }
-
   .hott-info {
-    padding: $size-mid-secondary;
-    margin: $size-mid-secondary 0;
-    text-align: center;
-    background-color: $light-grey;
-    position: relative;
+  padding: $size-mid-secondary;
+  margin: $size-mid-secondary 0;
+  text-align: center;
+  background: $gradient;
+  position: relative;
+    h1 {
+      color: $dark-blue;
+      font-style: italic;
+      margin-top: $size-third;
+    }
+
+    h2 {
+      color: $dark-grey;
+      strong {
+        padding: 0 0.5em;
+        color: $dark-blue;
+      }
+    }
+
     .photo-box {
       position: absolute;
       left: 50%;
       top: 0;
       transform: translate( -50%, -50%);
     }
+
     .info-row {
       li {
         font-size: 1.2em;
@@ -165,12 +160,12 @@ text-align: center;
         list-style-type: none;
         padding-top: $size-mid-secondary;
         width: 24%;
+
         strong {
+          padding: 0 0.5em;
           color: $black;
         }
-
       }
     }
-
   }
 }

@@ -28,3 +28,11 @@ body {
 @media screen and (min-width: 480px) {}
 @media screen and (min-width: 768px) {}
 @media screen and (min-width: 996px) {}
+
+$gradient: repeating-linear-gradient(
+  45deg,
+  $light-grey,
+  $light-grey 2px,
+  transparent 2px,
+  transparent 4px
+);

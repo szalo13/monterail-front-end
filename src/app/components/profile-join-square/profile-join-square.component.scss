@@ -1,0 +1,29 @@
+@import '../../../theme/_variables.scss';
+.join-square {
+  list-style: none;
+  display: inline-block;
+  padding: $size-small;
+  position: relative;
+
+  h6 {
+    color: $dark-blue;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+  }
+
+  .photo-box {
+    width: 120px;
+    height: 120px;
+    padding: $size-primary;
+    background-color: $light-grey;
+    background: $gradient;
+
+    img {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

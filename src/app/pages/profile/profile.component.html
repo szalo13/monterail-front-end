@@ -1,7 +1,7 @@
 <div class="container pos-rel">
   <div class="close-btn">
     <i class="fa fa-lg fa-times"></i></div>
-  <div class="col-sm-10 col-sm-offset-1">
+  <div class="col-md-10 col-md-offset-1>
     <div class="row img-row">
       <div class="hor-center photo-box">
         <img src="../../../assets/img/avatars/128-3.jpg" alt="avatar" class="img-responsive img-circle">
@@ -49,26 +49,14 @@
         </app-profile-info-square>
         </li>
       </ul>
-      
+
       <h4>Who joined these platform that same period</h4>
       <ul>
-        <li class="join-square">
-          <div class="photo-box">
-            <img src="../../../assets/img/avatars/128-13.jpg" alt="who joined">
-          </div>
-          <h6>S.E.N Weweru</h6>
-        </li>
-        <li class="join-square">
-          <div class="photo-box">
-            <img src="../../../assets/img/avatars/128-13.jpg" alt="who joined">
-          </div>
-          <h6>S.E.N Weweru</h6>
-        </li>
-        <li class="join-square">
-          <div class="photo-box">
-            <img src="../../../assets/img/avatars/128-13.jpg" alt="who joined">
-          </div>
-          <h6>S.E.N Weweru</h6>
+        <li *ngFor="let item of joinSquares" class="join-square">
+          <app-profile-join-square
+            [name]="item['name']"
+            [img]="item['img']"
+          ></app-profile-join-square>
         </li>
       </ul>
       <h4>The hottest discusion these days</h4>
