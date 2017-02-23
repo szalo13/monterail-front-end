@@ -1,0 +1,88 @@
+<div class="container pos-rel">
+  <div class="close-btn">
+    <i class="fa fa-lg fa-times"></i></div>
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="row img-row">
+      <div class="hor-center photo-box">
+        <img src="../../../assets/img/avatars/128-3.jpg" alt="avatar" class="img-responsive img-circle">
+      </div>
+    </div>
+    <h2>Dr. Halima</h2>
+    <ul class="row member-info">
+      <li class="info">
+        <h4><strong>member for </strong>5 months</h4></li>
+      <li class="info">
+        <h4><strong>last seen </strong>yesterday afternoon</h4></li>
+      <li class="info">
+        <h4><strong>activity level</strong>
+          <span class="fa-stack certif">
+<i class="fa fa-certificate fa-stack-2x"></i>
+<i class="fa fa-star fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack certif">
+<i class="fa fa-certificate fa-stack-2x"></i>
+<i class="fa fa-star fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack certif">
+<i class="fa fa-certificate fa-stack-2x"></i>
+<i class="fa fa-star fa-stack-1x"></i>
+          </span>
+      </h4></li>
+    </ul>
+    <div class="row how-start">
+      <a class="fa-stack arrow arr-left">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-angle-left fa-stack-1x fa-inverse"></i>
+      </a>
+      <a class="fa-stack arrow arr-right">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-angle-right fa-stack-1x fa-inverse"></i>
+      </a>
+      <h1>How it started?</h1>
+      <h4>Thats where We have been these 5 months</h4>
+
+      <ul class="info-square-box">
+        <li *ngFor="let item of infoSquares">
+          <app-profile-info-square
+          [number]="item['number']"
+          [description]="item['description']">
+        </app-profile-info-square>
+        </li>
+      </ul>
+      
+      <h4>Who joined these platform that same period</h4>
+      <ul>
+        <li class="join-square">
+          <div class="photo-box">
+            <img src="../../../assets/img/avatars/128-13.jpg" alt="who joined">
+          </div>
+          <h6>S.E.N Weweru</h6>
+        </li>
+        <li class="join-square">
+          <div class="photo-box">
+            <img src="../../../assets/img/avatars/128-13.jpg" alt="who joined">
+          </div>
+          <h6>S.E.N Weweru</h6>
+        </li>
+        <li class="join-square">
+          <div class="photo-box">
+            <img src="../../../assets/img/avatars/128-13.jpg" alt="who joined">
+          </div>
+          <h6>S.E.N Weweru</h6>
+        </li>
+      </ul>
+      <h4>The hottest discusion these days</h4>
+    </div>
+    <div class="hott-info tittle-row">
+      <div class="photo-box"><img src="../../../assets/img/avatars/128-5.jpg" alt="hottest" class="img-circle img-responsive"></div>
+      <h2><strong>Andrew</strong>found the guardian article</h2>
+      <h1>Vegan diet to stop diabetes progress</h1>
+      <ul class="info-row">
+        <li><strong>6</strong>related discussion</li>
+        <li><strong>6</strong>related discussion</li>
+        <li><strong>6</strong>related discussion</li>
+        <li><strong>6</strong>related discussion</li>
+      </ul>
+    </div>
+  </div>
+</div>

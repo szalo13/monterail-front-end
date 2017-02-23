@@ -11,6 +11,7 @@ import { VotesInlineComponent } from './components/votes-inline/votes-inline.com
 import { TittleRowComponent } from './components/tittle-row/tittle-row.component';
 import { QuestionComponent } from './components/question/question.component';
 import { CommentRowComponent } from './components/comment-row/comment-row.component';
+import { ProfileInfoSquareComponent } from './components/profile-info-square/profile-info-square.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CommentRowComponent } from './components/comment-row/comment-row.compon
     VotesInlineComponent,
     TittleRowComponent,
     QuestionComponent,
-    CommentRowComponent
+    CommentRowComponent,
+    ProfileInfoSquareComponent
   ],
   imports: [
     BrowserModule,
