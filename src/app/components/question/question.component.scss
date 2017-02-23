@@ -1,13 +1,16 @@
 @import '../../../theme/_variables.scss';
 
 app-question {
+  .unfollows,
+  app-votes-inline {
+    padding-right: $size-secondary;
+    text-align: center;
+    display: block;
+  }
+
   .unfollows {
     color: $dark-blue;
     font-weight: bold;
-      padding-top: $size-secondary;
-      padding-right: $size-secondary;
-      text-align: center;
-      display: block;
   }
 
   .question {
@@ -16,11 +19,16 @@ app-question {
   }
 
   .mobile-info {
-    h3 {
+    padding-bottom: $size-mid-secondary;
+
+    .unfollows {
+      padding-left: $size-primary;
       float: left;
+      padding-top: 0;
     }
 
     app-votes-inline {
+      padding-right: $size-primary;
       float: right;
     }
   }
@@ -36,13 +44,32 @@ app-question {
 
     .cont-col {
       line-height: 1.8em;
-      padding: $size-primary $size-secondary $size-mid-secondary $size-primary;
+      padding: $size-primary $size-secondary 0 $size-primary;
     }
   }
   @media screen and (min-width: 480px) {}
   @media screen and (min-width: 768px) {
+    .unfollows,
+    app-votes-inline {
+      padding-top: $size-secondary;
+    }
+
+    .mobile-info {
+      padding-bottom: 0;
+
+      app-votes-inline {
+        display: block;
+        float: none;
+      }
+    }
+
     .dis-table {
       display: table;
-    }}
+
+      .cont-col {
+        padding: $size-primary $size-secondary $size-mid-secondary $size-primary;
+      }
+    }
+  }
   @media screen and (min-width: 996px) {}
 }
