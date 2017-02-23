@@ -7,27 +7,30 @@ app-single-question {
 
   app-votes-inline {
     padding-right: $size-secondary;
+    padding-bottom: $size-third;
     text-align: center;
     display: block;
+    float: right;
   }
 
   .comments {
     background-color: $background-color;
     position: relative;
 
+    .content {
+      padding-right: $size-secondary;
+    }
+
     .sub-comment {
       background-color: $background-color;
       position: relative;
-
-      app-comment-row {
-        margin-left: $avatar-box + 1px;
-      }
+      border-left: $size-third solid $dark-grey;
     }
 
     .last app-comment-row {
       h1,
       p {
-        padding-bottom: $size-mid-primary;
+        padding-bottom: $size-mid-secondary;
       }
     }
   }
@@ -47,17 +50,9 @@ app-single-question {
   .bordered {
     .comment {
       border: $border;
-
-      .content {
-        border-left: $border;
-      }
     }
 
     .sub-comment {
-      app-comment-row {
-        border-left: $border;
-      }
-
       .reduce-border {
         position: absolute;
         height: $border-width;
@@ -67,17 +62,38 @@ app-single-question {
       }
       border-right: $border;
       border-bottom: $border;
-
-      .content {
-        padding-right: $avatar-box;
-        border-left: $border;
-      }
     }
   }
   @media screen and (min-width: 480px) {}
   @media screen and (min-width: 768px) {
     app-votes-inline {
       padding-top: $size-secondary;
+      padding-bottom: $size-third;
+      float: none;
+    }
+
+    .bordered {
+      .content {
+        border-left: $border;
+      }
+
+      .sub-comment {
+        app-comment-row {
+          border-left: $border;
+          margin-left: $avatar-box + 1px;
+        }
+
+        .content {
+          padding-right: $avatar-box;
+        }
+      }
+    }
+
+    .last app-comment-row {
+      h1,
+      p {
+        padding-bottom: $size-mid-primary;
+      }
     }
   }
   @media screen and (min-width: 996px) {}

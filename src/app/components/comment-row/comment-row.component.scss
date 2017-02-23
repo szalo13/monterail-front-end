@@ -6,6 +6,11 @@ app-comment-row {
   $avatar-size: 80px;
   $avatar-padd: $size-secondary;
 
+  .avatar-box {
+    width: $avatar-size;
+    padding: $size-secondary;
+  }
+
   .content {
     width: 100%;
     display: table-cell;
@@ -19,16 +24,18 @@ app-comment-row {
 
   h2 {
     margin: 0;
-    padding-top: $size-primary;
+    padding-top: $size-mid-secondary;
     color: $dark-grey;
     font-size: 1em;
     text-transform: uppercase;
-    padding-left: $avatar-padd;
+    padding-left: $size-secondary;
   }
 
   p {
     line-height: $p-line-height;
-    padding-left: $avatar-padd;
+    padding-left: $size-secondary;
+    padding-top: 20px;
+    margin-left: -80px;
   }
 
   .bold {
