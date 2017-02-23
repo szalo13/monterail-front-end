@@ -19,16 +19,12 @@ app-single-question {
       background-color: $background-color;
       position: relative;
 
-      app-tittle-row {
-        margin-left: $avatar-box;
-
-        h2 {
-          padding-top: $size-mid-secondary;
-        }
+      app-comment-row {
+        margin-left: $avatar-box + 1px;
       }
     }
 
-    .last app-tittle-row {
+    .last app-comment-row {
       h1,
       p {
         padding-bottom: $size-mid-primary;
@@ -52,13 +48,13 @@ app-single-question {
     .comment {
       border: $border;
 
-      .avatar-box {
-        border-right: $border;
+      .content {
+        border-left: $border;
       }
     }
 
     .sub-comment {
-      app-tittle-row {
+      app-comment-row {
         border-left: $border;
       }
 

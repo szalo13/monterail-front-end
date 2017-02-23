@@ -10,6 +10,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { VotesInlineComponent } from './components/votes-inline/votes-inline.component';
 import { TittleRowComponent } from './components/tittle-row/tittle-row.component';
 import { QuestionComponent } from './components/question/question.component';
+import { CommentRowComponent } from './components/comment-row/comment-row.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuestionComponent } from './components/question/question.component';
     ProfileComponent,
     VotesInlineComponent,
     TittleRowComponent,
-    QuestionComponent
+    QuestionComponent,
+    CommentRowComponent
   ],
   imports: [
     BrowserModule,
