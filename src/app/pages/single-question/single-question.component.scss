@@ -72,6 +72,11 @@ app-single-question {
       float: none;
     }
 
+    .comments {
+      .sub-comment {
+        border-left: 0;
+      }
+    }
     .bordered {
       .content {
         border-left: $border;
