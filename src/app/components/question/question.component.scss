@@ -1,0 +1,48 @@
+@import '../../../theme/_variables.scss';
+
+app-question {
+  .unfollows {
+    color: $dark-blue;
+    font-weight: bold;
+      padding-top: $size-secondary;
+      padding-right: $size-secondary;
+      text-align: center;
+      display: block;
+  }
+
+  .question {
+    position: relative;
+    margin-bottom: $size-mid-primary;
+  }
+
+  .mobile-info {
+    h3 {
+      float: left;
+    }
+
+    app-votes-inline {
+      float: right;
+    }
+  }
+
+  .dis-table {
+    display: block;
+
+    .empty-col {
+      width: $avatar-box;
+      display: table-cell;
+      background-color: $light-blue;
+    }
+
+    .cont-col {
+      line-height: 1.8em;
+      padding: $size-primary $size-secondary $size-mid-secondary $size-primary;
+    }
+  }
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {
+    .dis-table {
+      display: table;
+    }}
+  @media screen and (min-width: 996px) {}
+}
