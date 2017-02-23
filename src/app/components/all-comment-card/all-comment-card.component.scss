@@ -1,0 +1,56 @@
+@import '../../../theme/_variables.scss';
+
+app-all-comment-card {
+  $circle-size: $comment-circle-size;
+  $size-third: $size-third;
+  $comment-card-height: $comment-card-height;
+  $avatar-padd: $size-secondary;
+  $avatar-box: $avatar-box;
+  padding: 0 0;
+
+  .card {
+    position: relative;
+    text-align: center;
+    height: $comment-card-height;
+    width: $avatar-box;
+    background-color: $comment-card-grey;
+    padding: $size-third;
+
+    .circle {
+      width: $circle-size;
+      height: $circle-size;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: $dark-grey;
+    }
+
+    .box {
+      padding: $avatar-padd;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: $circle-size;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      text-transform: uppercase;
+      padding-top: $size-third;
+      padding-bottom: $size-primary;
+      border-top: 1px solid black;
+    }
+  }
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 996px) {}
+}
+
+app-all-questions.asked {
+  .footer {
+    border-top: none;
+    font-style: italic;
+    font-weight: bold;
+  }
+}

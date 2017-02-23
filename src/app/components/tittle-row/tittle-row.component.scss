@@ -3,7 +3,7 @@
 app-tittle-row {
   width: 100%;
   display: table;
-  $avatar-size: 80px;
+  $avatar-size: $avatar-box-sm;
   $avatar-padd: $size-secondary;
 
   .avatar-box {

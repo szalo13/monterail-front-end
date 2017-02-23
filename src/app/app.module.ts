@@ -13,6 +13,7 @@ import { QuestionComponent } from './components/question/question.component';
 import { CommentRowComponent } from './components/comment-row/comment-row.component';
 import { ProfileInfoSquareComponent } from './components/profile-info-square/profile-info-square.component';
 import { ProfileJoinSquareComponent } from './components/profile-join-square/profile-join-square.component';
+import { AllCommentCardComponent } from './components/all-comment-card/all-comment-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProfileJoinSquareComponent } from './components/profile-join-square/pro
     QuestionComponent,
     CommentRowComponent,
     ProfileInfoSquareComponent,
-    ProfileJoinSquareComponent
+    ProfileJoinSquareComponent,
+    AllCommentCardComponent
   ],
   imports: [
     BrowserModule,

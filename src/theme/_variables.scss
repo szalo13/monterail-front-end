@@ -4,6 +4,7 @@ $white: #fff;
 $black: #000;
 $dark-blue: #1068b0;
 $dark-grey: #AEB0B2;
+$comment-card-grey: #eee;
 $heavy-grey: #A7A9AC;
 $light-blue: #e0f3fc;
 $light-grey: #eeeeee;
@@ -19,7 +20,13 @@ $size-third: 10px;
 $size-mid-primary: 60px;
 $size-mid-secondary: 40px;
 $boot-row: 15px;
-$avatar-box: 100px; //Grid
+$avatar-box: 120px;
+$avatar-box-sm: 80px;
+
+$comment-card-height: 220px;
+$comment-card-width: 100px;
+$comment-circle-size: $size-primary;
+$comment-card-spacing: $size-third;
 
 body {
   background-color: $background-color;

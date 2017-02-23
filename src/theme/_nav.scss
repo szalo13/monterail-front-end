@@ -97,6 +97,9 @@
 
     .search-row {
       display: block;
+      .padd-right {
+        padding-right: 7.5px;
+      }
       .btn-nav,
       input {
         width: 100%;
