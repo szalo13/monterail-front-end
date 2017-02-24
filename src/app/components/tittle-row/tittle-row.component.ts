@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tittle-row',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TittleRowComponent implements OnInit {
 
+  @Input() user;
+  @Input() tittle;
+  
   constructor() { }
 
   ngOnInit() {

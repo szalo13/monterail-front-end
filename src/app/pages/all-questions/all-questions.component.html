@@ -40,9 +40,8 @@
 </div>
 
 
-<div class="container card-shadow all-quest-card">
-  <app-all-question-cont></app-all-question-cont>
-  <app-all-question-cont></app-all-question-cont>
+<div *ngFor="let question of questions" class="container card-shadow all-quest-card">
+  <app-all-question-cont [question]="question"></app-all-question-cont>
 </div>
 <div class="container">
   <div class="row no-gutters more-questions card-shadow">

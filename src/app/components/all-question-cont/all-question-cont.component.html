@@ -1,7 +1,10 @@
 <div class="box-shadow back-white row no-gutters">
   <div class="tittle row no-gutters">
     <div class="col-sm-9 light-blue">
-      <app-tittle-row></app-tittle-row>
+      <app-tittle-row
+        [user]="question.user"
+        [tittle]="question.tittle"
+      ></app-tittle-row>
     </div>
   </div>
 
