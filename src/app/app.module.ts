@@ -18,6 +18,7 @@ import { AllQuestionContComponent } from './components/all-question-cont/all-que
 import { AvatarBoxComponent } from './components/avatar-box/avatar-box.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 const appRoutes: Routes = [
   { path: 'profile',      component: ProfileComponent },
   { path: 'single',       component: SingleQuestionComponent },
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     ProfileJoinSquareComponent,
     AllCommentCardComponent,
     AllQuestionContComponent,
-    AvatarBoxComponent
+    AvatarBoxComponent,
+    HeroPageComponent
   ],
   imports: [
     BrowserModule,

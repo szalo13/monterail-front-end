@@ -1,0 +1,45 @@
+@import '../../../theme/_mixins.scss';
+
+app-hero-page {
+  font-family: 'Slabo 27px', serif;
+  .pos-abs-cen {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-page {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    min-height: 50vh;
+    background-color: #222;
+  }
+
+  ul {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  li {
+    padding-top: 1.5em;
+    font-size: 3em;
+    display: inline;
+    padding: 40px;
+  }
+
+  a {
+    @include link-colors(#eee, #eee, #aaa, #aaa);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+}

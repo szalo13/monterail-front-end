@@ -1,6 +1,7 @@
 @import '_variables.scss';
 
 .app-nav {
+  position: relative;
   $nav-top-padd: $size-mid-secondary;
   background-color: $white;
 
