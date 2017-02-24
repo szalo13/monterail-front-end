@@ -41,7 +41,9 @@
           ></app-comment-row>
         </div>
         <div class="col-sm-3">
-          <app-votes-inline></app-votes-inline>
+          <app-votes-inline
+            [votes]="comment.votes"
+          ></app-votes-inline>
         </div>
       </div>
 
@@ -53,7 +55,9 @@
           ></app-comment-row>
         </div>
         <div class="col-sm-3">
-          <app-votes-inline></app-votes-inline>
+          <app-votes-inline
+            [votes]="subcomment.votes"
+          ></app-votes-inline>
         </div>
       </div>
     </div>
