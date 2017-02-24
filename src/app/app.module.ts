@@ -21,7 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   { path: 'profile',      component: ProfileComponent },
   { path: 'single',       component: SingleQuestionComponent },
-  { path: 'all',          component: SingleQuestionComponent }
+  { path: 'all',          component: AllQuestionsComponent }
 ]
 @NgModule({
   declarations: [
