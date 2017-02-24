@@ -6,7 +6,7 @@ app-all-comment-card {
   $comment-card-height: $comment-card-height;
   $avatar-padd: $size-secondary;
   $avatar-box: $avatar-box;
-  padding: 0 0;
+  padding: 0;
 
   .card {
     position: relative;
@@ -15,6 +15,10 @@ app-all-comment-card {
     width: $avatar-box;
     background-color: $comment-card-grey;
     padding: $size-third;
+
+    .hidden {
+      display: hidden;
+    }
 
     .circle {
       width: $circle-size;
@@ -28,7 +32,9 @@ app-all-comment-card {
     }
 
     .box {
-      padding: $avatar-padd;
+      width: 100px;
+      min-height: 100px;
+      padding: 15px;
       font-weight: bold;
     }
 
@@ -42,6 +48,12 @@ app-all-comment-card {
       padding-bottom: $size-primary;
       border-top: 1px solid black;
     }
+    h3 {
+      font-weight: bold;
+      position: absolute;
+      padding-top: 5px;
+      padding-left: 25px;
+    }
   }
   @media screen and (min-width: 480px) {}
   @media screen and (min-width: 768px) {}
@@ -49,9 +61,17 @@ app-all-comment-card {
 }
 
 app-all-questions.asked {
-  .footer {
-    border-top: none;
-    font-style: italic;
-    font-weight: bold;
+  .card {
+    .box {
+      width: 100px;
+      min-height: 100px;
+      padding: 15px;
+    }
+
+    .footer {
+      border-top: none;
+      font-style: italic;
+      font-weight: bold;
+    }
   }
 }

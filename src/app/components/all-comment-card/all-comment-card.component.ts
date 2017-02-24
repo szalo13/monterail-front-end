@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-all-comment-card',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllCommentCardComponent implements OnInit {
 
+  @Input() type;
+  @Input() user;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.type);
   }
 
 }

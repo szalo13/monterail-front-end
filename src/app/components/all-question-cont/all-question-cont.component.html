@@ -11,35 +11,45 @@
   <div class="back-white row no-gutters padd-bott">
     <ul class="row card-container clearfix">
       <li class="asked">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+          [type]="asked"
+        ></app-all-comment-card>
       </li>
 
       <li class="activities">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'activities'"
+        [user]="question.user"></app-all-comment-card>
       </li>
 
       <li class="commented">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
-        <app-all-comment-card></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="answered">
-        <app-all-comment-card ></app-all-comment-card>
+        <app-all-comment-card
+        [type]="'answered'"></app-all-comment-card>
       </li>
     </ul>
 
