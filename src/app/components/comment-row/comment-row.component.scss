@@ -1,6 +1,10 @@
 @import '../../../theme/_variables.scss';
 
 app-comment-row {
+  .dis-table {
+    display: table;
+    width: 100%;
+  }
   width: 100%;
   display: table;
   $avatar-size: 80px;
