@@ -1,18 +1,20 @@
 @import '../../../theme/_variables.scss';
 
-app-avatar-box{
+app-avatar-box {
   .avatar-box:hover {
     cursor: pointer;
   }
-  .avatar-box {
-    width: $avatar-box;
-    height: $avatar-box;
-    padding: $size-primary;
-  }
 
-  @media screen and (min-width: 768px) {
+  .avatar-box {
     width: $avatar-box-sm;
     height: $size-secondary;
     padding: $size-secondary;
+  }
+  @media screen and (min-width: 768px) {
+    .avatar-box {
+      width: $avatar-box;
+      height: $avatar-box;
+      padding: $size-primary;
+    }
   }
 }
