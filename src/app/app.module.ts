@@ -17,6 +17,12 @@ import { AllCommentCardComponent } from './components/all-comment-card/all-comme
 import { AllQuestionContComponent } from './components/all-question-cont/all-question-cont.component';
 import { AvatarBoxComponent } from './components/avatar-box/avatar-box.component';
 
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes = [
+  { path: 'profile',      component: ProfileComponent },
+  { path: 'single',       component: SingleQuestionComponent },
+  { path: 'all',          component: SingleQuestionComponent }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +42,8 @@ import { AvatarBoxComponent } from './components/avatar-box/avatar-box.component
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
