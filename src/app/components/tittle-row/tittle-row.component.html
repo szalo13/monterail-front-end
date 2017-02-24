@@ -1,7 +1,7 @@
 <div *ngFor="let userInfo of user">
-  <div class="avatar-box">
-    <img src="{{userInfo.avatar}}" alt="avatar" class="img-responsive img-circle">
-  </div>
+  <app-avatar-box
+    [user]="userInfo"
+  ></app-avatar-box>
   <div class="content">
     <h2><strong>{{userInfo.name}}</strong>commented it</h2>
     <h1>{{tittle}}</h1>

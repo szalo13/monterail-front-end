@@ -1,7 +1,7 @@
 <div *ngFor="let user of comment.user" class="dis-table">
-  <div class="avatar-box">
-    <img src="{{user.avatar}}" alt="avatar" class="img-responsive img-circle">
-  </div>
+  <app-avatar-box
+    [user]="user"
+  ></app-avatar-box>
   <div class="content">
     <h2><strong>{{user.name}}</strong>commented it<span class="separator">&#9679;</span><span class="when">yesterday</span></h2>
     <p>{{comment.description}}</p>

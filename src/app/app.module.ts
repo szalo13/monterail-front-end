@@ -15,6 +15,7 @@ import { ProfileInfoSquareComponent } from './components/profile-info-square/pro
 import { ProfileJoinSquareComponent } from './components/profile-join-square/profile-join-square.component';
 import { AllCommentCardComponent } from './components/all-comment-card/all-comment-card.component';
 import { AllQuestionContComponent } from './components/all-question-cont/all-question-cont.component';
+import { AvatarBoxComponent } from './components/avatar-box/avatar-box.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AllQuestionContComponent } from './components/all-question-cont/all-que
     ProfileInfoSquareComponent,
     ProfileJoinSquareComponent,
     AllCommentCardComponent,
-    AllQuestionContComponent
+    AllQuestionContComponent,
+    AvatarBoxComponent
   ],
   imports: [
     BrowserModule,
