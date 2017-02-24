@@ -41,45 +41,11 @@
 
 
 <div class="container card-shadow all-quest-card">
-  <div class="box-shadow back-white row no-gutters">
-    <div class="tittle row no-gutters">
-      <div class="col-sm-9 light-blue">
-        <app-tittle-row></app-tittle-row>
-      </div>
-    </div>
-
-    <div class="back-white row no-gutters padd-bott">
-      <ul class="row card-container clearfix">
-        <li>
-          <app-all-comment-card class="asked"></app-all-comment-card>
-        </li>
-
-        <li>
-          <app-all-comment-card class="activities"></app-all-comment-card>
-        </li>
-
-        <li>
-          <app-all-comment-card class="commented"></app-all-comment-card>
-        </li>
-
-        <li>
-          <app-all-comment-card class="commented"></app-all-comment-card>
-        </li>
-
-        <li>
-          <app-all-comment-card class="commented"></app-all-comment-card>
-        </li>
-
-        <li>
-          <app-all-comment-card class="answered"></app-all-comment-card>
-        </li>
-      </ul>
-
-      <ul class="quest-info">
-        <li class="info">2 related discussions</li>
-        <li class="info">9 peers involved</li>
-        <li class="info">5 conversations</li>
-      </ul>
-    </div>
+  <app-all-question-cont></app-all-question-cont>
+  <app-all-question-cont></app-all-question-cont>
+</div>
+<div class="container">
+  <div class="row no-gutters more-questions card-shadow">
+    <h3>Load more questions</h3>
   </div>
 </div>

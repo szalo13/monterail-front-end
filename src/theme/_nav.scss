@@ -1,7 +1,8 @@
 @import '_variables.scss';
 
 .app-nav {
-  $nav-top-padd: $size-mid-primary;
+  $nav-top-padd: $size-mid-secondary;
+  background-color: $white;
 
   .search-row {
     display: none;
@@ -96,6 +97,7 @@
     }
 
     .search-row {
+      padding-bottom: $size-mid-secondary;
       display: block;
       .padd-right {
         padding-right: 7.5px;

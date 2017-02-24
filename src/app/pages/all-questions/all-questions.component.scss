@@ -1,84 +1,16 @@
 @import '../../../theme/_variables.scss';
 @import '../../../theme/_nav.scss';
 @import '../../../theme/_mixins.scss';
-$circle-size: 20px;
-$avatar-size: $avatar-box;
-$avatar-padd: $size-primary;
-$card-padding-top: $size-mid-secondary;
 
 app-all-questions {
-  .card-container {
-    padding-left: 0;
-    margin-left: -$comment-card-spacing;
-    margin-right: -$comment-card-spacing;
-    float: left;
-
-    li {
-      display: inline-block;
-      text-align: right;
-      margin: 0 $comment-card-spacing;
-    }
-  }
-
-  .asked {
-    display: inline-block;
-    background-color: $light-blue;
-    padding-top: $card-padding-top;
-
-    .card {
-      background-color: $light-blue;
-    }
-  }
-
-  .activities,
-  .answered,
-  .commented {
-    margin-top: $card-padding-top;
-  }
-
-  .activities .card {
-    background-color: transparent;
-  }
-
-  .answered .circle {
-    background-color: $black;
-  }
-
-  .quest-info {
-    float: right;
-    display: block;
-    margin-top: $card-padding-top;
-    padding-left: 0;
-    text-align: center;
-    height: $comment-card-height;
-    width: $comment-card-width;
-    font-style: italic;
-
-    .info {
-      padding-bottom: $comment-card-height/3.3;
-      display: block;
-    }
-
-    .info:last-child {
-      padding-bottom: 0;
-    }
-  }
-  @media screen and (min-width: 480px) {}
-  @media screen and (min-width: 768px) {
-    .padd-bott {
-      padding-bottom: $size-mid-secondary;
-    }
-    .quest-info {
-      width: 25%;
+  .more-questions {
+    h3 {
+      margin: 0;
+      padding: $size-mid-secondary;
       font-size: 1.2em;
-    }
-
-    app-tittle-row {
-      .avatar-box {
-        width: $avatar-size;
-        padding: $avatar-padd;
-      }
+      font-weight: bold;
+      color: $footer-red;
+      background-color: $white;
     }
   }
-  @media screen and (min-width: 996px) {}
 }
