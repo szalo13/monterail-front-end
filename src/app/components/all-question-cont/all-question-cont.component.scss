@@ -5,16 +5,19 @@ $avatar-padd: $size-primary;
 $card-padding-top: $size-mid-secondary;
 
 app-all-question-cont {
+  .tittle {
+    background-color: $light-blue;
+  }
+
   .card-container {
     padding-left: 0;
     margin-left: -$comment-card-spacing;
     margin-right: -$comment-card-spacing;
     float: left;
 
-    li {
+    .activities,
+    .answered {
       display: inline-block;
-      text-align: right;
-      margin: 0 $comment-card-spacing;
     }
   }
 
@@ -43,13 +46,14 @@ app-all-question-cont {
   }
 
   .quest-info {
+    text-align: left;
+    width: 25%;
     float: right;
     display: block;
     margin-top: $card-padding-top;
     padding-left: 0;
     text-align: center;
     height: $comment-card-height;
-    width: $comment-card-width;
     font-style: italic;
 
     .info {
@@ -63,8 +67,19 @@ app-all-question-cont {
   }
   @media screen and (min-width: 480px) {}
   @media screen and (min-width: 768px) {
+    .card-container {
+      li {
+        margin: 0 $comment-card-spacing;
+        display: inline-block;
+      }
+    }
+
     .padd-bott {
       padding-bottom: $size-mid-secondary;
+    }
+
+    .commented {
+      display: inline-block;
     }
 
     .quest-info {
@@ -79,5 +94,60 @@ app-all-question-cont {
       }
     }
   }
-  @media screen and (min-width: 996px) {}
+  @media screen and (min-width: 996px) {
+    .tittle {
+      background-color: $light-blue;
+    }
+
+    .quest-info {
+      text-align: center;
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .asked,
+    .commented {
+      display: none;
+    }
+
+    .card-container {
+      margin: 0 -1px;
+    }
+
+    .activities,
+    .answered {
+      margin: 0 1px;
+
+      .card {
+        background-color: $light-grey;
+      }
+    }
+
+    .quest-info {
+      width: 40%;
+
+      .info {
+        padding-bottom: 40px;
+      }
+
+      .info:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 996px) {
+    .commented:nth-child(n+2) {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 996px) and (max-width: 1200px) {
+    .commented:nth-child(n+5) {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .commented:nth-child(n+6) {
+      display: none;
+    }
+  }
 }
