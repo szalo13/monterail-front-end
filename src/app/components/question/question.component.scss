@@ -52,6 +52,9 @@ app-question {
   }
   @media screen and (min-width: 480px) {}
   @media screen and (min-width: 768px) {
+    .unfollows {
+      padding-left: 40px;
+    }
     .unfollows,
     app-votes-inline {
       padding-top: $size-secondary;

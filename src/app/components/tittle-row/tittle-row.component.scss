@@ -15,9 +15,11 @@ app-tittle-row {
 
   .content {
     width: 100%;
-    display: table-cell;
     vertical-align: top;
     text-align: left;
+
+    padding-left: 80px;
+    display: block;
   }
 
   .single-h3 {
@@ -86,8 +88,12 @@ app-tittle-row {
     }
 
     .avatar-box {
-      width: $avatar-size;
-      padding: $size-secondary;
+      width: $avatar-box;
+      padding: $size-primary;
+    }
+    .content {
+      padding: 0;
+      display: table-cell;
     }
   }
   @media screen and (min-width: 996px) {}
