@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from '../../services/questions.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
+  providers: [ QuestionsService ]
 })
 export class ProfileComponent implements OnInit {
+
+  private questions;
+  private user;
 
   private infoSquares = [
     { number: 15, description: 'description1' },
@@ -20,7 +25,12 @@ export class ProfileComponent implements OnInit {
     { img: '../../../assets/img/avatars/128-5.jpg', name: 'description3' }
   ];
 
-  constructor() { }
+  constructor(
+    questionsService: QuestionsService
+  ) {
+      this.questions = questionsService.getQuestions();
+      this.user = this.questions[1].user;
+  }
 
   ngOnInit() {
   }

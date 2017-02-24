@@ -1,4 +1,4 @@
-<div class="container pos-rel">
+<div *ngFor="let userInfo of user" class="container pos-rel">
   <div class="close-btn">
     <i class="fa fa-lg fa-times"></i></div>
 
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <h2>Dr. Halima</h2>
+    <h2>{{userInfo.name}}</h2>
     <ul class="row member-info">
       <li class="info">
         <strong>member for </strong>5 months</li>
