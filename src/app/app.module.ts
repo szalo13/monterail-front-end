@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ModalModule } from 'ng2-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { AllQuestionsComponent } from './pages/all-questions/all-questions.component';
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

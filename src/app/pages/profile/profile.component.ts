@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { QuestionsService } from '../../services/questions.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-profile',
@@ -8,9 +9,10 @@ import { QuestionsService } from '../../services/questions.service';
   providers: [ QuestionsService ]
 })
 export class ProfileComponent implements OnInit {
+  @ViewChild('profileModal') modal;
 
   private questions;
-  private user;
+  private user: User;
 
   private infoSquares = [
     { number: 15, description: 'description1' },
@@ -30,6 +32,14 @@ export class ProfileComponent implements OnInit {
   ) {
       this.questions = questionsService.getQuestions();
       this.user = this.questions[1].user;
+  }
+
+  showProfile() {
+    this.modal.show();
+  }
+
+  hideModal() {
+    this.modal.hide();
   }
 
   ngOnInit() {

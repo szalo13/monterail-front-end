@@ -2,6 +2,10 @@
 @import '../../../theme/_mixins.scss';
 
 app-profile {
+  .modal-header {
+    border-bottom: 0;
+  }
+  
   ul {
     padding-left: 0;
   }
@@ -68,6 +72,7 @@ app-profile {
     position: relative;
 
     .arrow {
+      margin: 0 15px;
       font-size: 1.5em;
       @include link-colors($dark-grey, $dark-blue, $dark-blue, $dark-grey, $dark-blue);
       position: absolute;
