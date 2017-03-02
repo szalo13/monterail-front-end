@@ -23,7 +23,7 @@
           </div>
         </li>
         <li class="sort-by">
-          Sort by: <a href="#">recent</a> or <a href="hot">hot</a>
+          Sort by: <span (click)="sortBy($event, 'recent')">recent</span> or <span (click)="sortBy($event, 'hot')">hot</span>
         </li>
       </ul>
     </div>
@@ -41,9 +41,20 @@
   </div>
 </div>
 
-
-<div *ngFor="let question of questions | filterBy: questionFilter" class="container card-shadow all-quest-card">
-  <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
+<div *ngIf="sortType=='hot'">
+  <div *ngFor="let question of questions | filterBy: questionFilter | orderBy: '-comments.length' " class="container card-shadow all-quest-card">
+    <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
+  </div>
+</div>
+<div *ngIf="sortType=='recent'">
+  <div *ngFor="let question of questions | filterBy: questionFilter| orderBy: '-votes' " class="container card-shadow all-quest-card">
+    <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
+  </div>
+</div>
+<div *ngIf="sortType=='other'">
+  <div *ngFor="let question of questions | filterBy: questionFilter" class="container card-shadow all-quest-card">
+    <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
+  </div>
 </div>
 <div class="container">
   <div class="row no-gutters more-questions card-shadow">
