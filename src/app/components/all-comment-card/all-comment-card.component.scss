@@ -40,6 +40,7 @@ app-all-comment-card {
 
     .footer {
       position: absolute;
+      color: $dark-grey;
       bottom: $circle-size;
       left: 50%;
       transform: translate(-50%, 50%);
@@ -48,6 +49,7 @@ app-all-comment-card {
       padding-bottom: $size-primary;
       border-top: 1px solid black;
     }
+
     h3 {
       font-weight: bold;
       position: absolute;
@@ -60,18 +62,16 @@ app-all-comment-card {
   @media screen and (min-width: 996px) {}
 }
 
-app-all-questions.asked {
+app-all-questions {
   .card {
-    .box {
-      width: 100px;
-      min-height: 100px;
-      padding: 15px;
-    }
-
-    .footer {
-      border-top: none;
-      font-style: italic;
-      font-weight: bold;
+    .activ {
+      .footer {
+        border-top: none;
+        color: $black;
+        font-style: italic;
+        font-weight: bold;
+        bottom: 40px;
+      }
     }
   }
 }
