@@ -8,6 +8,18 @@ app-all-comment-card {
   $avatar-box: $avatar-box;
   padding: 0;
 
+  .mobile {
+    display: block;
+  }
+
+  .tablet {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
   .card {
     position: relative;
     text-align: center;
@@ -58,8 +70,28 @@ app-all-comment-card {
     }
   }
   @media screen and (min-width: 480px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 996px) {}
+  @media screen and (min-width: 768px) {
+    .mobile {
+      display: none;
+    }
+
+    .tablet {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 996px) {
+    .mobile {
+      display: none;
+    }
+
+    .tablet {
+      display: none;
+    }
+
+    .desktop {
+      display: block;
+    }
+  }
 }
 
 app-all-questions {

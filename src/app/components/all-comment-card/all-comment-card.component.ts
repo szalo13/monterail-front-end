@@ -11,12 +11,24 @@ export class AllCommentCardComponent implements OnInit {
   @Input() user;
   @Input() question;
   @Input() activities;
-  
+
+  private _mobileCommentsLength = 1;
+  private _tabletCommentsLength = 3;
+  private _desktopCommentsLength = 4;
+  private mobileActivities;
+  private tabletActivities;
+  private desktopActivities;
   private avatar;
 
   constructor() { }
 
   ngOnInit() {
+    if (this.activities) {
+        this.desktopActivities = this.activities - this._desktopCommentsLength;
+        this.mobileActivities = this.activities - this._mobileCommentsLength;
+        this.tabletActivities = this.activities - this._tabletCommentsLength;
+    }
+
     if(this.user){
       this.avatar = this.user.avatar;
     }
