@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   @ViewChild('profileModal') modal;
 
   private questions;
-  private user: User;
+  public user: User;
 
   private infoSquares = [
     { number: 15, description: 'description1' },

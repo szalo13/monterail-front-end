@@ -1,3 +1,5 @@
+<app-profile #profileModal></app-profile>
+
 <div class="app-nav">
   <a class="fa-stack arrow">
     <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -41,7 +43,7 @@
 
 
 <div *ngFor="let question of questions" class="container card-shadow all-quest-card">
-  <app-all-question-cont [question]="question"></app-all-question-cont>
+  <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
 </div>
 <div class="container">
   <div class="row no-gutters more-questions card-shadow">

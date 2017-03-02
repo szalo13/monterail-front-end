@@ -1,5 +1,6 @@
 <div *ngFor="let userInfo of user">
   <app-avatar-box
+    (click)="showProfile()"
     [user]="userInfo"
   ></app-avatar-box>
   <div class="content">
