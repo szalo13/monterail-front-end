@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProfileComponent } from '../../pages/profile/profile.component';
 
 @Component({
   selector: 'app-all-comment-card',
@@ -11,6 +12,7 @@ export class AllCommentCardComponent implements OnInit {
   @Input() user;
   @Input() question;
   @Input() activities;
+  @Input() profileModal: ProfileComponent;
 
   private _mobileCommentsLength = 1;
   private _tabletCommentsLength = 3;
@@ -34,4 +36,12 @@ export class AllCommentCardComponent implements OnInit {
     }
   }
 
+  showProfile() {
+    if(this.user && this.profileModal) {
+      this.profileModal.user.name = this.user.name;
+      this.profileModal.showProfile();
+    } else {
+      console.log("User or profile modal is not declared");
+    }
+  }
 }
