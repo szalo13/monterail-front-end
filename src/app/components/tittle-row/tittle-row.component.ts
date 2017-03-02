@@ -19,6 +19,7 @@ export class TittleRowComponent implements OnInit {
 
   showProfile() {
     this.profileModal.user.name = this.user[0].name;
+    this.profileModal.user.avatar = this.user[0].avatar;
     this.profileModal.showProfile();
   }
 }

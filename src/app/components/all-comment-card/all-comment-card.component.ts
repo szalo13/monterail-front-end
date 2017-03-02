@@ -39,6 +39,8 @@ export class AllCommentCardComponent implements OnInit {
   showProfile() {
     if(this.user && this.profileModal) {
       this.profileModal.user.name = this.user.name;
+      this.profileModal.user.avatar = this.user.avatar;
+
       this.profileModal.showProfile();
     } else {
       console.log("User or profile modal is not declared");

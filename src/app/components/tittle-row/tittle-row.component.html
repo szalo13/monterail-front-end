@@ -4,7 +4,7 @@
     [user]="userInfo"
   ></app-avatar-box>
   <div class="content">
-    <h2><strong>{{userInfo.name}}</strong>commented it</h2>
+    <h2 (click)="showProfile()"><strong>{{userInfo.name}}</strong>commented it</h2>
     <h1>{{tittle}}</h1>
   </div>
 </div>
