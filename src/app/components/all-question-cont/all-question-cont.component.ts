@@ -11,10 +11,17 @@ export class AllQuestionContComponent implements OnInit {
   @Input() question;
   @Input() profileModal:ProfileComponent;
 
-  constructor() { }
+  private commentsLength;
+  private comments;
+  private answered;
+
+  constructor() {
+    }
 
   ngOnInit() {
-
+    this.comments = this.question.comments;
+    this.commentsLength = this.question.comments.length;
+    this.answered = this.question.answered[0];
   }
 
 }

@@ -1,26 +1,32 @@
 <div [ngSwitch]="type" class="card">
   <div *ngSwitchCase="'asked'" class="box">
     <!-- <img src="../../../assets/img/avatars/128-11.jpg" alt="Avatar" class="img-responsive img-circle"> -->
+    <div class="footer">
+      asked
+    </div>
   </div>
   <div  *ngSwitchCase="'answered'" class="box">
-    <img src="../../../assets/img/avatars/128-11.jpg" alt="Avatar" class="img-responsive img-circle">
+    <img src="{{avatar}}" alt="Avatar" class="img-responsive img-circle">
     <div class="footer">
       answered
     </div>
+    <div class="circle">
+    </div>
   </div>
   <div  *ngSwitchCase="'commented'" class="box">
-    <img src="../../../assets/img/avatars/128-11.jpg" alt="Avatar" class="img-responsive img-circle">
+    <img src="{{avatar}}" alt="Avatar" class="img-responsive img-circle">
     <div class="footer">
       commented
     </div>
+    <div class="circle">
+    </div>
   </div>
   <div *ngSwitchCase="'activities'" class="box activ">
-    <img src="../../../assets/img/avatars/128-11.jpg" alt="Avatar" class="img-responsive hidden img-circle">
-    <h3>13</h3>
+    <h3>{{activities}}</h3>
     <div class="footer">
       more activities
     </div>
-  </div>
-  <div class="circle">
+    <div class="circle">
+    </div>
   </div>
 </div>

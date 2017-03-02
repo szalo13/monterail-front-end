@@ -9,11 +9,17 @@ export class AllCommentCardComponent implements OnInit {
 
   @Input() type;
   @Input() user;
+  @Input() question;
+  @Input() activities;
+  
+  private avatar;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.type);
+    if(this.user){
+      this.avatar = this.user.avatar;
+    }
   }
 
 }

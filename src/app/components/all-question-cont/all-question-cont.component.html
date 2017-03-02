@@ -20,36 +20,42 @@
       <li class="activities">
         <app-all-comment-card
         [type]="'activities'"
-        [user]="question.user"></app-all-comment-card>
+        [activities]="commentsLength"></app-all-comment-card>
       </li>
 
       <li class="commented">
         <app-all-comment-card
+        [user]="comments[0].user[0]"
         [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
         <app-all-comment-card
+        [user]="comments[1].user[0]"
         [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
         <app-all-comment-card
+        [user]="comments[2].user[0]"
         [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
         <app-all-comment-card
+        [user]="comments[3].user[0]"
         [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="commented">
         <app-all-comment-card
+        [user]="comments[4].user[0]"
         [type]="'commented'"></app-all-comment-card>
       </li>
 
       <li class="answered">
         <app-all-comment-card
+        [user]="answered"
         [type]="'answered'"></app-all-comment-card>
       </li>
     </ul>
