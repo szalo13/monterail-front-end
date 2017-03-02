@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProfileComponent } from '../../pages/profile/profile.component';
 
 @Component({
   selector: 'app-question',
@@ -8,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class QuestionComponent implements OnInit {
 
   @Input() question;
+  @Input() profileModal: ProfileComponent;
 
   constructor() { }
 

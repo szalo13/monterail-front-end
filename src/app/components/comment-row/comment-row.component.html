@@ -1,9 +1,10 @@
-<div *ngFor="let user of comment.user" class="dis-table">
+<div class="dis-table">
   <app-avatar-box
+    (click)="showProfile()"
     [user]="user"
   ></app-avatar-box>
   <div class="content">
-    <h2><strong>{{user.name}}</strong>commented it<span class="separator">&#9679;</span><span class="when">yesterday</span></h2>
+    <h2 (click)="showProfile()"><strong>{{user.name}}</strong>commented it<span class="separator">&#9679;</span><span class="when">yesterday</span></h2>
     <p>{{comment.description}}</p>
   </div>
 </div>

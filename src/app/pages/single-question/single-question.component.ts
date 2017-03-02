@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { QuestionsService } from '../../services/questions.service';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-single-question',
@@ -8,6 +9,8 @@ import { QuestionsService } from '../../services/questions.service';
   providers: [ QuestionsService ]
 })
 export class SingleQuestionComponent implements OnInit {
+
+  @ViewChild('profileModal') profileModal:ProfileComponent;
 
   private questions;
   private question;
@@ -19,6 +22,9 @@ export class SingleQuestionComponent implements OnInit {
     this.question = (this.questions[1]);
   }
 
+  showProfile() {
+    this.profileModal.showProfile();
+  }
 
   ngOnInit() {
   }

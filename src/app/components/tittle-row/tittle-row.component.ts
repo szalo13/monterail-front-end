@@ -11,6 +11,7 @@ export class TittleRowComponent implements OnInit {
   @Input() user;
   @Input() tittle;
   @Input() profileModal: ProfileComponent;
+  @Input() text;
 
   constructor() { }
 

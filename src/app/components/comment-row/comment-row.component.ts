@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { ProfileComponent } from '../../pages/profile/profile.component';
 
 @Component({
   selector: 'app-comment-row',
@@ -8,11 +9,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CommentRowComponent implements OnInit {
 
   @Input() comment;
+  @Input() profileModal: ProfileComponent;
+
+  private user;
 
   constructor() { }
 
+  showProfile() {
+    this.profileModal.user.avatar = this.user.avatar;
+    this.profileModal.user.name = this.user.name;
+    this.profileModal.showProfile();
+  }
+
   ngOnInit() {
-    console.log(this.comment.user);
+    this.user = this.comment.user[0];
   }
 
 }

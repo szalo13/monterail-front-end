@@ -1,3 +1,5 @@
+<app-profile #profileModal></app-profile>
+
 <div class="app-nav">
   <a class="fa-stack arrow">
     <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -24,6 +26,7 @@
   <div class="container app-question-cont">
     <app-question
       [question]="question"
+      [profileModal]="profileModal"
     ></app-question>
   </div>
 
@@ -38,6 +41,7 @@
         <div class="col-sm-9 pos-rel">
           <app-comment-row
             [comment]="comment"
+            [profileModal]="profileModal"
           ></app-comment-row>
         </div>
         <div class="col-sm-3">
@@ -52,6 +56,7 @@
         <div class="col-sm-9">
           <app-comment-row
             [comment]="subcomment"
+            [profileModal]="profileModal"
           ></app-comment-row>
         </div>
         <div class="col-sm-3">
