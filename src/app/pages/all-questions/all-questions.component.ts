@@ -13,6 +13,7 @@ export class AllQuestionsComponent implements OnInit {
   @ViewChild('profileModal') profileModal:ProfileComponent;
 
   private questions;
+  private questionFilter: any = { tittle: '' };
 
   constructor(
     questionsService: QuestionsService
