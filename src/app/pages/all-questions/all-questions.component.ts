@@ -13,6 +13,7 @@ export class AllQuestionsComponent implements OnInit {
   @ViewChild('profileModal') profileModal:ProfileComponent;
 
   private questions;
+  private filteredQuestions;
   private questionFilter: any = { tittle: '' };
   private sortType: string = "other";
 
@@ -21,11 +22,31 @@ export class AllQuestionsComponent implements OnInit {
     private questionsService: QuestionsService
   ) {
     this.questions = questionsService.getQuestions();
+    this.filteredQuestions = this.questions;
     console.log(this.questions[1]);
   }
 
   showProfile() {
     this.profileModal.showProfile();
+  }
+
+  search(event) {
+      let toSearch = this.questionFilter.tittle;
+      let questions = this.questions.slice();
+
+      if(toSearch != "") {
+        this.filteredQuestions = [];
+        for(let i = 0; i < questions.length; i++) {
+          if (questions[i].tittle.indexOf(toSearch) >= 0) {
+            this.filteredQuestions.push(questions[i]);
+          } else {
+            console.log("Searching phrase does not exist");
+          }
+        }
+      } else {
+        console.log("there is no text to search");
+        this.filteredQuestions = questions.slice();
+      }
   }
 
   sortBy(event:any, type:string) {

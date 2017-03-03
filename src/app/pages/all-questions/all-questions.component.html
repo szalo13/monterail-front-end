@@ -34,7 +34,7 @@
           <input type="text" placeholder="Search questions" [(ngModel)]="questionFilter.tittle" name="search">
         </div>
         <div class="col-sm-3">
-          <button type="submit" class="btn btn-nav">Search</button>
+          <button (click)="search($event)" type="submit" class="btn btn-nav">Search</button>
         </div>
       </form>
     </div>
@@ -42,20 +42,23 @@
 </div>
 
 <div *ngIf="sortType=='hot'">
-  <div *ngFor="let question of questions | filterBy: questionFilter | orderBy: '-comments.length' " class="container card-shadow all-quest-card">
+  <div *ngFor="let question of filteredQuestions | orderBy: '-comments.length' " class="container card-shadow all-quest-card">
     <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
   </div>
 </div>
+
 <div *ngIf="sortType=='recent'">
-  <div *ngFor="let question of questions | filterBy: questionFilter| orderBy: '-votes' " class="container card-shadow all-quest-card">
+  <div *ngFor="let question of filteredQuestions | orderBy: '-votes' " class="container card-shadow all-quest-card">
     <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
   </div>
 </div>
+
 <div *ngIf="sortType=='other'">
-  <div *ngFor="let question of questions | filterBy: questionFilter" class="container card-shadow all-quest-card">
+  <div *ngFor="let question of filteredQuestions" class="container card-shadow all-quest-card">
     <app-all-question-cont [question]="question" [profileModal]="profileModal"></app-all-question-cont>
   </div>
 </div>
+
 <div class="container">
   <div class="row no-gutters more-questions card-shadow">
     <h3>Load more questions</h3>
