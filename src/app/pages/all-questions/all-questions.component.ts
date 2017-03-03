@@ -1,12 +1,13 @@
 import { Component, OnInit, ViewChild, Renderer } from '@angular/core';
 import { QuestionsService } from '../../services/questions.service';
 import { ProfileComponent } from '../profile/profile.component';
+import { PaginatePipe, PaginationControlsComponent, PaginationService } from 'ng2-pagination';
 
 @Component({
   selector: 'app-all-questions',
   templateUrl: './all-questions.component.html',
   styleUrls: ['./all-questions.component.scss'],
-  providers: [ QuestionsService ]
+  providers: [ QuestionsService, PaginationService ]
 })
 export class AllQuestionsComponent implements OnInit {
 
@@ -16,14 +17,16 @@ export class AllQuestionsComponent implements OnInit {
   private filteredQuestions;
   private questionFilter: any = { tittle: '' };
   private sortType: string = "other";
+  private _ItemsPerPage = 2;
+  private itemsPerPage;
 
   constructor(
     private render: Renderer,
     private questionsService: QuestionsService
   ) {
+    this.itemsPerPage = this._ItemsPerPage;
     this.questions = questionsService.getQuestions();
     this.filteredQuestions = this.questions;
-    console.log(this.questions[1]);
   }
 
   showProfile() {
@@ -65,6 +68,10 @@ export class AllQuestionsComponent implements OnInit {
     } else {
       this.sortType = 'other';
     }
+  }
+
+  loadMoreQuestions() {
+      this.itemsPerPage = this.itemsPerPage + this._ItemsPerPage;
   }
 
   ngOnInit() {

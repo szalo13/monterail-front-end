@@ -6,10 +6,11 @@ app-all-questions {
   .more-questions {
     h3 {
       margin: 0;
-      padding: $size-mid-secondary;
+      padding: $size-mid-secondary $size-mid-secondary $size-mid-primary $size-mid-secondary ;
       font-size: 1.2em;
       font-weight: bold;
       color: $footer-red;
+      cursor: pointer;
       background-color: $white;
     }
   }

@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ModalModule } from 'ng2-bootstrap/modal';
 import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
 import {NgPipesModule} from 'ngx-pipes';
+import { PaginatePipe, PaginationService } from 'ng2-pagination';
 
 import { AppComponent } from './app.component';
 import { AllQuestionsComponent } from './pages/all-questions/all-questions.component';
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     AllCommentCardComponent,
     AllQuestionContComponent,
     AvatarBoxComponent,
-    HeroPageComponent
+    HeroPageComponent,
+    PaginatePipe
   ],
   imports: [
     BrowserModule,
