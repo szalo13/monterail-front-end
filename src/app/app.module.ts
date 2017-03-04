@@ -25,8 +25,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 const appRoutes: Routes = [
   { path: 'profile',      component: ProfileComponent },
-  { path: 'single',       component: SingleQuestionComponent },
-  { path: 'all',          component: AllQuestionsComponent }
+  { path: 'single/:id',       component: SingleQuestionComponent },
+  { path: 'all',          component: AllQuestionsComponent },
+  { path: '***',          component: AllQuestionsComponent }
 ]
 @NgModule({
   declarations: [

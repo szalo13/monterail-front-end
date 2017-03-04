@@ -15372,4 +15372,16 @@ export class QuestionsService {
   public getQuestions(){
     return this.data;
   }
+
+  public getQuestion(id: string) {
+    let i = 0;
+    for (i; i < this.data.length; i++) {
+      if (this.data[i]._id.indexOf(id) >= 0) {
+        return this.data[i];
+      } else {
+        // If there is no ID in current object
+      }
+    }
+    // Did not found any item with ID
+  }
 }
