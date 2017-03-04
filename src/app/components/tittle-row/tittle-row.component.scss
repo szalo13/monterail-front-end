@@ -27,6 +27,7 @@ app-tittle-row {
   }
 
   h1 {
+    cursor: pointer;
     color: $dark-blue;
     font-style: italic;
     font-size: 1.6em;
@@ -40,6 +41,7 @@ app-tittle-row {
   }
 
   h2 {
+    cursor: pointer;
     margin: 0;
     padding-top: $size-primary;
     color: $dark-grey;

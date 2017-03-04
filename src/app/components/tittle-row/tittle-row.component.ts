@@ -8,19 +8,21 @@ import { ProfileComponent } from '../../pages/profile/profile.component';
 })
 export class TittleRowComponent implements OnInit {
 
-  @Input() user;
-  @Input() tittle;
+  @Input() question;
   @Input() profileModal: ProfileComponent;
   @Input() text;
+
+  private user;
 
   constructor() { }
 
   ngOnInit() {
+    this.user = this.question.user[0];
   }
 
   showProfile() {
-    this.profileModal.user.name = this.user[0].name;
-    this.profileModal.user.avatar = this.user[0].avatar;
+    this.profileModal.user.name = this.user.name;
+    this.profileModal.user.avatar = this.user.avatar;
     this.profileModal.showProfile();
   }
 }

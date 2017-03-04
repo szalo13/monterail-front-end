@@ -1,14 +1,14 @@
-<div *ngFor="let userInfo of user">
+<div>
   <app-avatar-box
     (click)="showProfile()"
-    [user]="userInfo"
+    [user]="user"
   ></app-avatar-box>
   <div *ngIf="text" class="content">
-    <h2 (click)="showProfile()"><strong>{{userInfo.name}}</strong>{{text}}</h2>
-    <h1>{{tittle}}</h1>
+    <h2 (click)="showProfile()"><strong>{{user.name}}</strong>{{text}}</h2>
+    <h1 [routerLink]="['/single', question._id]">{{question.tittle}}</h1>
   </div>
   <div *ngIf="!text" class="content">
-    <h2 (click)="showProfile()"><strong>{{userInfo.name}}</strong>commented it</h2>
-    <h1>{{tittle}}</h1>
+    <h2 (click)="showProfile()"><strong>{{user.name}}</strong>commented it</h2>
+    <h1 [routerLink]="['/single', question._id]">{{question.tittle}}</h1>
   </div>
 </div>

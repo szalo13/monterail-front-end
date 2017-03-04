@@ -8,6 +8,10 @@ app-all-comment-card {
   $avatar-box: $avatar-box;
   padding: 0;
 
+  img {
+    cursor: pointer;
+  }
+  
   .mobile {
     display: block;
   }

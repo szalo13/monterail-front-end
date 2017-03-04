@@ -44,7 +44,6 @@
 <div *ngIf="sortType=='hot'">
   <div *ngFor="let question of filteredQuestions | paginate: { itemsPerPage: itemsPerPage, currentPage: p } | orderBy: '-comments.length' " class="container card-shadow all-quest-card">
     <app-all-question-cont
-    [routerLink]="['/single', question._id]"
     [question]="question" [profileModal]="profileModal"></app-all-question-cont>
   </div>
 </div>
@@ -52,7 +51,6 @@
 <div *ngIf="sortType=='recent'">
   <div *ngFor="let question of filteredQuestions | paginate: { itemsPerPage: itemsPerPage, currentPage: p } | orderBy: '-votes' " class="container card-shadow all-quest-card">
     <app-all-question-cont
-    [routerLink]="['/single', question._id]"
     [question]="question" [profileModal]="profileModal"></app-all-question-cont>
   </div>
 </div>
@@ -60,7 +58,6 @@
 <div *ngIf="sortType=='other'">
   <div *ngFor="let question of filteredQuestions | paginate: { itemsPerPage: itemsPerPage, currentPage: p }" class="container card-shadow all-quest-card">
     <app-all-question-cont
-    [routerLink]="['/single', question._id]"
     [question]="question" [profileModal]="profileModal"></app-all-question-cont>
   </div>
 </div>
