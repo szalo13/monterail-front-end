@@ -17,7 +17,7 @@ export class AllQuestionsComponent implements OnInit {
   private filteredQuestions;
   private questionFilter: any = { tittle: '' };
   private sortType: string = "other";
-  private _ItemsPerPage = 2;
+  private _ItemsPerPage = 5;
   private itemsPerPage;
 
   constructor(
